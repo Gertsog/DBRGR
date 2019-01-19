@@ -1,0 +1,68 @@
+﻿@model IEnumerable<DBRGR.Models.Client>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientMyself)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientMore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientAge)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientMyself)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientMore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientAge)
+        </td>
+        <td>
+            @Html.ActionLink("Изменить", "Edit", new { id=item.ClientID }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ClientID })
+        </td>
+    </tr>
+}
+
+</table>

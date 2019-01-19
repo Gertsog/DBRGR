@@ -1,0 +1,58 @@
+﻿@model DBRGR.Models.Meeting
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meeting</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Candidate.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Candidate.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.ClientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.ClientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment.Seller)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment.Seller)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InvitationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

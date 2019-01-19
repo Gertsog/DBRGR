@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <p class="lead"><center><font size="18">Агентство знакомств</font></center><p>
+    <p><center>Главная страница приложения для базы данных</center><p>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <p>
+           @Html.ActionLink("Клиенты", "Index", "Clients")
+        </p>
+    </div>
+    <div class="col-md-2">
+        <p>
+            @Html.ActionLink("Кандидаты", "Index", "Candidates")
+        </p>
+    </div><div class="col-md-2">
+    <p>
+            @Html.ActionLink("Встречи", "Index", "Meetings")
+    </p>
+</div><div class="col-md-2">
+    <p>
+            @Html.ActionLink("Оплата", "Index", "Payments")
+    </p>
+</div>
+</div>
